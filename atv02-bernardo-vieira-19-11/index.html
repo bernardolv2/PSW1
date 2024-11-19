@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div id="imagem-esquerda">
+            <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC128Y9-TDPq-XwtCZCarGmgNHr0nEjtsNGg&s" alt=""></div>
+        </div>
+        <div><h1 id="titulo-form"> FORMULÁRIO PSW </h1></div>
+        <div id="imagem-direita">
+            <div> <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/14932882-de-contorno-de-icone-de-verificacao-de-documento-papel-de-formulario-vetor.jpg" alt=""></div>
+        </div>
+    </header>
+    <div id="reajuste">
+        <nav>
+            <ul>
+                <li class="ativo"><a href="#home">Início</a></li>
+                <li class="desativo"><a href="#home">Perfil</a></li>
+                <li class="desativo"><a href="#news">Notícias</a></li>
+                <li class="desativo"><a href="#contact">Contato</a></li>
+                <li class="desativo"><a href="#about">Sobre</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="formulario">
+                <div id="cabeca-formulario">
+                    <div id="texto-esquerda">
+                        <h2 id="titulo-secundario"> CRIE UMA CONTA</h2>
+                    </div>
+                    <div id="botao-direita"><input type="button" 
+                    onclick="alert('Insira seus dados')" value="SOBRE"></div>
+                </div>
+                <form action="./perfil.php" method="post">
+                    <label for="nome_completo">Digite seu nome: </label>
+                    <input type="text" name="nome" id="idnome" placeholder="Ex: behx">
+
+                    <label for="nome_completo">Digite seu sobrenome: </label>
+                    <input type="text" name="sobrenome" id="idsobrenome" placeholder="Ex: D. Luffy">
+
+                    <label for="nascimento">Insira sua data de nascimento: </label>
+                    <input type="date" name="nascimento" id="idnascimento" max="<?=date('Y')?>-<?=date('m')?>-<?=date('d')?>"
+                    title="Selecione uma data que seja antes de <?=date('d')?>/<?=date('m')?>/<?=date('Y')?>" 
+                    value="<?=date('Y')?>-<?=date('m')?>-<?=date('d')?>">
+
+                    <label for="genero">Qual seu Gênero? </label>
+                    <select name="genero" id="idgenero">
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="binario">Não binário</option>
+                        <option value="outro"> outro </option>
+                    </select>
+
+            <label for="telefone">Telefone: </label>
+            <input type="tel" name="telefone" id="idtelefone" placeholder=" Ex: 77981076782">
+            <label for="numero">Numero casa: </label>
+            <input type="number" name="numero" id="idnumero" placeholder="Ex: 129">
+            <label for="bairro">Bairro: </label>
+            <input type="text" name="bairro" id="idbairro" placeholder="Ex: =paraiso">
+            <label for="rua">Rua: </label>
+            <input type="text" name="rua" id="idrua" placeholder="Ex: rua praça gasparino">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="idemail" placeholder="Ex:behx@gmail.com">
+            <label for="CEP">CEP:</label>
+            <input type="text" name="CEP" id="CEP" required pattern="\d{5}-\d{3}" placeholder="xxxxx-xxx">
+            <label for="cpf"> CPF: </label>
+            <input type="text" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx" title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+            <label for="senha"> nova senha: </label>
+            <input type="password" name="senha" id="idsenha" placeholder="Ex: behx123">
+            <div id="cor">
+            <label for="cor">Selecione sua cor favorita:</label>
+            <input type="color" name="cor">
+            </div>
+                    
+
+        <div class="selecao">
+                    <label for="linguagem"> Qual sua linguagem de programacao preferida? </label>
+                     <ul class="radio">
+                           <li>
+                               <input type="checkbox" id="idlinguagem_preferida1" name="linguagem_preferida1" value="python" class="caixa-maior">
+                              <label for="linguagem_preferida1">Html</label>
+                           </li>
+                            <li>
+                               <input type="checkbox" id="idlinguagem_preferida2" name="linguagem_preferida2" value="php" class="caixa-maior">
+                            <label for="linguagem_preferida2">Portugol</label>
+                           </li>
+                           <li>
+                               <input type="checkbox" id="idlinguagem_preferida3" name="linguagem_preferida3" value="java" class="caixa-maior">
+                            <label for="linguagem_preferida3">Css</label>
+                           </li>
+                         <li>
+                             <input type="checkbox" id="idlinguagem_preferida4" name="linguagem_preferida4" value="C" class="caixa-maior">
+                              <label for="linguagem_preferida4">C</label>
+                           </li>
+                       </ul>
+        </div>
+
+                    <div class="selecao" > 
+                        <label for="bio">Escreva uma auto-biografia sobre você </label>
+                        <textarea name="message" rows="4" placeholder="Ex: Sou Bernardo, e eu sou viciado em jogar futebol, fifa e gosto de estudar historia e matematica"></textarea>
+                    </div>
+
+                    <div id="alinhamento-de-botoes">
+                        <input type="submit" value="Concluir">
+                        <input type="reset" value="Reiniciar Formulário">
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer>
+        
+        <div id="termo-logo">
+            <div class="logo">
+            
+            </div>
+            <div id="termo">
+                <p>&copy; ©2024 - Bernardo Vieira Levi</p>
+            </div>
+            
+        </div>   
+    </footer>
+</body>
+</html>
