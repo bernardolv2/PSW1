@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(190deg, rgb(17, 2, 17) , rgb(0, 0, 0), rgb(0, 0, 0),rgb(0, 0, 0), #000000);
+    background-image: url('https://wallpapers.com/images/featured/azul-escuro-1rsfpmx7gtht9j79.jpg');
 }
 
 header {
@@ -12,46 +12,28 @@ header {
     text-align: center;
     justify-content: space-between;
     background-color: #190087;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-div#imagem-esquerda {
+#imagem-esquerda,
+#imagem-direita {
     width: 13%;
-    height: auto;
     align-content: center;
     margin-right: 1%;
-    div {
-        display: flex;
-        justify-content: right;
-    }
-    div img {
-        width: 60%;
-        height: 40%;
-        border-radius: 10px;
-    }
 }
 
-div#imagem-direita {
-    width: 13%;
+#imagem-esquerda img,
+#imagem-direita img {
+    width: 60%;
     height: auto;
-    align-content: center;
-    margin-right: 1%;
-    div {
-        display: flex;
-        justify-content: right;
-    }
-    div img {
-        width: 60%;
-        height: 40%;
-        border-radius: 10px;
-    }
+    border-radius: 10px;
 }
 
 #titulo-form {
     font-size: 2.5rem;
     color: rgb(83, 164, 218);
-    align-content: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
 }
 
 nav {
@@ -66,13 +48,13 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #12d1d1;
-  }
-  
-  li {
+}
+
+li {
     float: left;
-  }
-  
-  li a {
+}
+
+li a {
     font-family: 'Times New Roman', Times, serif;
     display: block;
     color: white;
@@ -80,46 +62,47 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
     border-right: 2px solid rgb(28, 27, 106);
-  }
+}
 
-  li a:hover:not(.ativo) {
+li a:hover:not(.ativo) {
     background-color: #110640;
-  }
-  
-  .ativo{
+}
+
+.ativo {
     background-color: #16134b;
-  }
+}
 
 main {
     width: 100%;
-    justify-content: center;
     display: flex;
+    justify-content: center;
 }
 
 #cabeca-formulario {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-        #texto-esquerda {
-            width: 50%;
-            justify-content: left;
-        }
-        #botao-direita {
-            display: flex;
-            width: 50%;
-            justify-content: right;
-        }
+    justify-content: space-between;
+}
+
+#texto-esquerda {
+    width: 50%;
+    text-align: left;
+}
+
+#botao-direita {
+    display: flex;
+    width: 50%;
+    justify-content: right;
 }
 
 #titulo-secundario {
     font-size: 2rem;
-    text-align: left;
     color: rgb(54, 55, 126);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week], [type=datetime-local] {
+input[type=text], input[type=number], select, input[type=date], input[type=email], input[type=password], input[type=tel], input[type=color] {
     width: 100%;
     padding: 1% 1%;
     font-size: 1rem;
@@ -128,6 +111,7 @@ input[type=text], [type=number], select, input[type=date], input[type=date], inp
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #cor {
@@ -136,70 +120,31 @@ input[type=text], [type=number], select, input[type=date], input[type=date], inp
     align-items: center;
 }
 
-input[type=submit] {
-    background-color: rgba(16, 223, 61, 0.749);
+input[type=submit], input[type=reset], input[type=button] {
+    background-color: #008cba;
     color: white;
     padding: 12px 20px;
     font-size: 1rem;
     margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 4px;
-    box-sizing: border-box;
-    transition: transform 0.5s;
-}
-
-input[type=time] {
-    width: 11%;
-}
-
-[type=datetime] {
-    width: 20%;
-    height: 50%;
-}
-
-[type=datetime-local] {
-    width: 20%;
-    height: 50%;
+    cursor: pointer;
+    transition: transform 0.5s, background-color 0.3s;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 input[type=submit]:hover {
-    background-color: rgba(0, 90, 2, 0.749);
+    background-color: #0ac539;
     transform: scale(1.1);
-}
-input[type=reset] {
-    background-color: rgba(226, 9, 9, 0.749);
-    color: white;
-    padding: 12px 20px;
-    font-size: 1rem;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    transition: transform 0.5s;
 }
 
 input[type=reset]:hover {
-    background-color: rgba(90, 0, 0, 0.749);
+    background-color: #aa0000;
     transform: scale(1.1);
 }
 
-input[type=button] {
-    background-color: rgb(0, 6, 129);
-    color: white;
-    padding: 12px 20px;
-    font-size: 1rem;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    transition: transform 0.5s;
-}
-
 input[type=button]:hover {
-    background-color: rgb(0, 5, 81);
+    background-color: #005482;
     transform: scale(1.1);
 }
 
@@ -213,180 +158,117 @@ input[type=button]:hover {
 #formulario {
     text-align: center;
     padding: 2%;
-    width: 100%;
-    height: 100%;
-    display: block;
+    width: 50%;
     background-color: rgba(162, 174, 182, 0.699);
-    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .selecao {
     text-align: left;
+    margin: 1rem 0;
 }
 
 .radio {
-    background-color: #cccccc00;
+    list-style-type: none;
+    padding: 0;
+    background-color: transparent;
 }
 
 .radio li {
-    float: none;
     display: flex;
+    align-items: center;
     color: #190087;
 }
 
 .caixa-maior {
     width: 1.5%;
+    margin-right: 0.5rem;
 }
 
 label {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     display: block;
-    margin: 1%;
+    margin-bottom: 0.5rem;
 }
-div.selecao textarea {
-    width: 100%;
-  }
 
-div#redes {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 0.7%;
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 4px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
+
 footer {
-    display: flex;
     background-color: rgba(116, 116, 116, 0.742);
-    flex-direction: column;
+    padding: 1rem;
     text-align: center;
-    height: auto;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-div#redes a {
-    width: 3%;
-}
-footer a {
-    color: rgb(0, 0, 0);
-}
-footer a:hover {
-    color: rgb(54, 54, 54);
-    transition: transform 0.3s;
-}
 footer p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-#termo-logo {
-    display: inline-flex;
-    width: 100%;
-}
-#termo {
-    width: 80%;
-    text-align: center;
-    p {
-        margin-top: 0.1%;
-    }
-}
-.logo {
-    width: 10%;
+    margin: 0;
 }
 
-@media screen and (min-width: 2560px){
- 
-    * {
-        font-size: 1.4rem;
-        #titulo-form {
-            font-size: 3rem;
-        }
-    }
-    footer img {
-        width: 50%;
-    }
-}
-
-@media screen and (min-width: 1440px){
-    footer img {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 1024px){
- 
-    #titulo-form {
-        font-size: 2.2rem;
-    }
-    div#imagem-esquerda {
-        width: 20%;
-    }
-    
-    div#imagem-direita {
-        width: 15%;
-    }
-    footer img {
-        width: 70%;
-    }
-    div#redes img {
-        width: 2.5%;
-    }
-    #alinhamento-de-botoes {
-        gap: 2%;
-    }
-}
-
-@media screen and (max-width: 768px){
-    #reajuste {
-        display: flex;
-    }
+@media screen and (max-width: 768px) {
     #formulario {
-        background-color: #cccccc00;
-        padding: 10%;
-        label {
-            padding: 0.5%;
-            width: fit-content;
-            font-size: 120%;
+        width: 90%;
+        padding: 5%;
+    }
 
-        }
-    }
     #titulo-form {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
+
     nav {
         flex-direction: column;
-        width: 20%;
-         li {
-            width: 100%;
-         }
-    }
-    div#imagem-esquerda {
-        width: 20%;
-    }
-    
-    div#imagem-direita {
-        width: 20%;
-    }
-    #formulario {
-        padding: 1%;
     }
 }
-@media screen and (max-width: 428px){
-    #titulo-form {
-        font-size: 1.2em;
-    }
-    #titulo-secundario {
-        font-size: 1.1rem;
-    }
-    footer {
-        justify-content: center;
-        
-    }
-    div#redes img {
 
-        width: 3.5%;
+@media screen and (max-width: 428px) {
+    #titulo-form {
+        font-size: 1.2rem;
     }
-    #termo-logo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
+    footer {
+        padding: 0.5rem;
     }
+
 }
+
+
+button {
+    background-color: #008cba;
+    color: white; 
+    padding: 15px 32px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+button {
+    position: absolute; 
+    top: 170px; 
+    right: 320px; 
+}
+
+
+button:hover {
+    background-color: #190087;
+    transform: scale(1.1); 
+}
+
+button:focus {
+    outline: none; 
+    box-shadow: 0 0 8px #190087;
+}
+
+
+
