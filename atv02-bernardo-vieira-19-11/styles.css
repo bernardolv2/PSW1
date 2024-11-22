@@ -47,7 +47,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #12d1d1;
+    background-color: #008cba;
+    border-radius: 8px;
 }
 
 li {
@@ -131,6 +132,7 @@ input[type=submit], input[type=reset], input[type=button] {
     cursor: pointer;
     transition: transform 0.5s, background-color 0.3s;
     font-family: 'Times New Roman', Times, serif;
+
 }
 
 input[type=submit]:hover {
@@ -156,12 +158,15 @@ input[type=button]:hover {
 }
 
 #formulario {
-    text-align: center;
+    text-align: left;
     padding: 2%;
     width: 50%;
     background-color: rgba(162, 174, 182, 0.699);
     border-radius: 8px;
+ border-style: groove;
+ border-color: #190087;
     font-family: 'Times New Roman', Times, serif;
+    margin-right: 650px;
 }
 
 .selecao {
@@ -256,7 +261,7 @@ button {
 button {
     position: absolute; 
     top: 170px; 
-    right: 320px; 
+    right: 660px; 
 }
 
 
@@ -269,6 +274,8 @@ button:focus {
     outline: none; 
     box-shadow: 0 0 8px #190087;
 }
+
+
 
 
 
